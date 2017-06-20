@@ -1,0 +1,94 @@
+{
+  "nodes": [
+    {
+      "id": "7e6effd",
+      "type": "restApi",
+      "name": "Interactions",
+      "path": "/interactions",
+      "domain": "stackery.nomadfree.com",
+      "x": 210,
+      "y": 80,
+      "wires": [
+        [
+          "eb5f26fe"
+        ]
+      ]
+    },
+    {
+      "id": "be2b7408",
+      "type": "restApi",
+      "name": "Options",
+      "path": "/options",
+      "domain": "stackery.nomadfree.com",
+      "x": 190,
+      "y": 140,
+      "wires": [
+        [
+          "eb5f26fe"
+        ]
+      ]
+    },
+    {
+      "id": "a622d10f",
+      "type": "restApi",
+      "name": "Events",
+      "path": "/events",
+      "domain": "stackery.nomadfree.com",
+      "x": 190,
+      "y": 200,
+      "wires": [
+        [
+          "fb98fad6"
+        ]
+      ]
+    },
+    {
+      "id": "eb5f26fe",
+      "type": "function",
+      "name": "URL Verification",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 2,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 540,
+      "y": 80,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "8ac50694",
+      "type": "function",
+      "name": "Interaction Handler",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 550,
+      "y": 140,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "fb98fad6",
+      "type": "function",
+      "name": "Event Handler",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 550,
+      "y": 200,
+      "wires": [
+        []
+      ]
+    }
+  ]
+}
