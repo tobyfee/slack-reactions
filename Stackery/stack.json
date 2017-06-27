@@ -78,15 +78,16 @@
       "id": "fb98fad6",
       "type": "function",
       "name": "Event Handler",
-      "outputs": 1,
+      "outputs": 2,
       "memorySize": 128,
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 550,
-      "y": 200,
+      "x": 540,
+      "y": 280,
       "wires": [
+        [],
         []
       ]
     }
