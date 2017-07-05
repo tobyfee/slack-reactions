@@ -1,6 +1,7 @@
 const stackery = require('stackery')
 
 module.exports = function handler(message) {
-  let console.log(message)
+  console.log('hello?')
+  console.log(message);
   return JSON.parse(message).challenge;
 }
