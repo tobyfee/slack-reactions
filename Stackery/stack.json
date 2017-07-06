@@ -38,7 +38,7 @@
       "y": 200,
       "wires": [
         [
-          "fb98fad6"
+          "86cff916"
         ]
       ]
     },
@@ -77,15 +77,15 @@
     {
       "id": "fb98fad6",
       "type": "function",
-      "name": "Event Handler",
+      "name": "Challenge Verifier",
       "outputs": 0,
       "memorySize": 256,
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 520,
-      "y": 200,
+      "x": 830,
+      "y": 340,
       "wires": []
     },
     {
@@ -112,8 +112,37 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 500,
-      "y": 280,
+      "x": 490,
+      "y": 380,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "86cff916",
+      "type": "function",
+      "name": "Reaction Counter",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 510,
+      "y": 200,
+      "wires": [
+        [
+          "18eb3de1"
+        ]
+      ]
+    },
+    {
+      "id": "18eb3de1",
+      "type": "table",
+      "name": "Reactions",
+      "hashKey": "user",
+      "x": 820,
+      "y": 200,
       "wires": [
         []
       ]
