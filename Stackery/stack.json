@@ -87,6 +87,36 @@
       "x": 520,
       "y": 200,
       "wires": []
+    },
+    {
+      "id": "f1427869",
+      "type": "restApi",
+      "name": "Test",
+      "path": "/test",
+      "domain": "stackery.nomadfree.com",
+      "x": 200,
+      "y": 280,
+      "wires": [
+        [
+          "60f56864"
+        ]
+      ]
+    },
+    {
+      "id": "60f56864",
+      "type": "function",
+      "name": "Test",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 500,
+      "y": 280,
+      "wires": [
+        []
+      ]
     }
   ]
 }
