@@ -1,6 +1,21 @@
 const stackery = require('stackery')
 
-module.exports = function reactionCounter(message) {
-  console.log(message.body.toString());
-  stackery.output({ action: 'insert', record: { user: 'foobar' } });
+//     "event": {
+//               "type": "reaction_added",
+//                 "user": "U5UTLD724",
+//                 "item": {
+//                               "type": "message",
+//                                 "channel": "C5WCUKPU7",
+//                                 "ts": "1499379574.375919"
+//                           },
+//                 "reaction": "joy",
+//                 "item_user": "U5UTLD724",
+//                 "event_ts": "1499542683.228446"
+
+module.exports = function reactionCounter(event) {
+  let clause = { user: { condition: '=', value: event.item_user } };
+  let user = stackery.output({ action: 'select', where: clause }) || { user: event.item_user, reactions: [] };
+  user.reactions.push(event.reaction);
+  console.log(user);
+  stackery.output({ action: 'put', record: user });
 }
