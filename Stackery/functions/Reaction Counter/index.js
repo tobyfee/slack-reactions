@@ -13,6 +13,7 @@ const stackery = require('stackery')
 //                 "event_ts": "1499542683.228446"
 
 module.exports = function reactionCounter(event) {
+  console.log('event is ', event);
   let clause = { user: { condition: '=', value: event.item_user } };
   console.log('clause is ', clause);
   let user = stackery.output({ action: 'select', where: clause }) || { user: event.item_user, reactions: [] };
