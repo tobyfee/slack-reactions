@@ -14,10 +14,9 @@ const stackery = require('stackery')
 
 module.exports = function reactionCounter(message) {
   let event = JSON.parse(message.body.toString()).event;
-  console.log('event is ', event);
-  let clause = { user: { condition: '=', value: event.item_user } };
+  let clause = { id: { condition: '=', value: event.item_user } };
   console.log('clause is ', clause);
-  let user = stackery.output({ action: 'select', where: clause }) || { user: event.item_user, reactions: [] };
+  let user = stackery.output({ action: 'select', where: clause }) || { id: event.item_user, reactions: [] };
   console.log('user is ', user);
   user.reactions.push(event.reaction);
   console.log(user);
