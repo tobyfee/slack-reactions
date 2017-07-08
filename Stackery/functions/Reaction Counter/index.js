@@ -12,7 +12,8 @@ const stackery = require('stackery')
 //                 "item_user": "U5UTLD724",
 //                 "event_ts": "1499542683.228446"
 
-module.exports = function reactionCounter(event) {
+module.exports = function reactionCounter(message) {
+  let event = message.body.toString().event;
   console.log('event is ', event);
   let clause = { user: { condition: '=', value: event.item_user } };
   console.log('clause is ', clause);
