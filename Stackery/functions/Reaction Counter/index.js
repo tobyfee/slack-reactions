@@ -1,7 +1,7 @@
 const stackery = require('stackery')
 
 module.exports = function handler(message) {
-  console.dir(message)
+  console.log('Im here')
 
   let response = {}
   
