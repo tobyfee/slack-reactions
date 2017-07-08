@@ -139,8 +139,8 @@
     {
       "id": "18eb3de1",
       "type": "table",
-      "name": "Reactions",
-      "hashKey": "user",
+      "name": "Users",
+      "hashKey": "id",
       "x": 820,
       "y": 200,
       "wires": [
