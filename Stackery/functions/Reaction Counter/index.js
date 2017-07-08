@@ -1,5 +1,6 @@
 const stackery = require('stackery')
 
 module.exports = function reactionCounter(message) {
-  stackery.output({ action: 'insert', record: {} });
+  console.log(message.body.toString());
+  stackery.output({ action: 'insert', record: { user: 'foobar' } });
 }
