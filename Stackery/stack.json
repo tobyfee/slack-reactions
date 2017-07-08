@@ -68,8 +68,8 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 550,
-      "y": 140,
+      "x": 830,
+      "y": 80,
       "wires": [
         []
       ]
@@ -84,8 +84,8 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 830,
-      "y": 340,
+      "x": 870,
+      "y": 280,
       "wires": []
     },
     {
@@ -113,7 +113,7 @@
       "location": "inline",
       "envVars": {},
       "x": 490,
-      "y": 380,
+      "y": 280,
       "wires": [
         []
       ]
@@ -145,6 +145,53 @@
       "y": 200,
       "wires": [
         []
+      ]
+    },
+    {
+      "id": "48029385",
+      "type": "restApi",
+      "name": "Status",
+      "path": "/status",
+      "domain": "stackery.nomadfree.com",
+      "x": 200,
+      "y": 360,
+      "wires": [
+        [
+          "703ee1e4"
+        ]
+      ]
+    },
+    {
+      "id": "703ee1e4",
+      "type": "function",
+      "name": "Status",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 500,
+      "y": 360,
+      "wires": [
+        [
+          "3e3dee12"
+        ]
+      ]
+    },
+    {
+      "id": "96b24c2c",
+      "type": "timer",
+      "name": "Timer",
+      "timerType": "interval",
+      "intervalCount": 5,
+      "intervalUnit": "minutes",
+      "x": 200,
+      "y": 440,
+      "wires": [
+        [
+          "703ee1e4"
+        ]
       ]
     }
   ]
