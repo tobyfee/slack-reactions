@@ -1,8 +1,9 @@
 const stackery = require('stackery')
 
 module.exports = function status(message) {
-  let event = JSON.parse(message.body.toString()).event;
-  console.log('event is', event);
+  let body = message.body.toString();
+  let fields = body.split('&').map((k) => k.split('='));
+  console.log(fields);
   let action = 'select';
   let where = { id: event.user };
   let user = stackery.output({ action, where, increment });
