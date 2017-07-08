@@ -150,10 +150,10 @@
     {
       "id": "48029385",
       "type": "restApi",
-      "name": "Status",
-      "path": "/status",
+      "name": "Reactions",
+      "path": "/reactions",
       "domain": "stackery.nomadfree.com",
-      "x": 200,
+      "x": 210,
       "y": 360,
       "wires": [
         [
