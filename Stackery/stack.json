@@ -84,8 +84,8 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 870,
-      "y": 280,
+      "x": 850,
+      "y": 400,
       "wires": []
     },
     {
@@ -132,19 +132,8 @@
       "y": 200,
       "wires": [
         [
-          "3e3dee12"
+          "3d2c3275"
         ]
-      ]
-    },
-    {
-      "id": "3e3dee12",
-      "type": "table",
-      "name": "Users",
-      "hashKey": "id",
-      "x": 820,
-      "y": 200,
-      "wires": [
-        []
       ]
     },
     {
@@ -174,9 +163,7 @@
       "x": 500,
       "y": 360,
       "wires": [
-        [
-          "3e3dee12"
-        ]
+        []
       ]
     },
     {
@@ -188,6 +175,17 @@
       "intervalUnit": "minutes",
       "x": 200,
       "y": 440,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "3d2c3275",
+      "type": "table",
+      "name": "Users",
+      "hashKey": "id",
+      "x": 810,
+      "y": 280,
       "wires": [
         []
       ]
