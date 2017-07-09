@@ -112,7 +112,7 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 490,
+      "x": 370,
       "y": 280,
       "wires": [
         []
@@ -128,7 +128,7 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 510,
+      "x": 450,
       "y": 200,
       "wires": [
         [
@@ -160,7 +160,7 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 500,
+      "x": 410,
       "y": 360,
       "wires": [
         [
