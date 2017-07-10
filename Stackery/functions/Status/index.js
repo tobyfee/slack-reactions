@@ -12,6 +12,6 @@ module.exports = function status(message) {
         rxns[rxn.reaction] = 1;
       }
       return rxns;
-    }))
+    }), {})
   );
 }
