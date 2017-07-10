@@ -121,7 +121,7 @@
     {
       "id": "86cff916",
       "type": "function",
-      "name": "Reaction Counter",
+      "name": "Event Handler",
       "outputs": 1,
       "memorySize": 128,
       "timeout": 30,
@@ -132,7 +132,7 @@
       "y": 200,
       "wires": [
         [
-          "3d2c3275"
+          "65abd5bc"
         ]
       ]
     },
@@ -188,6 +188,19 @@
       "hashKey": "id",
       "x": 810,
       "y": 280,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "65abd5bc",
+      "type": "table",
+      "name": "Reactions",
+      "hashKey": "user",
+      "rangeKey": "timestamp",
+      "rangeKeyType": "number",
+      "x": 820,
+      "y": 200,
       "wires": [
         []
       ]
