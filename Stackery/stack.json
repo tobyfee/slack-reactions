@@ -182,17 +182,6 @@
       ]
     },
     {
-      "id": "3d2c3275",
-      "type": "table",
-      "name": "Users",
-      "hashKey": "id",
-      "x": 810,
-      "y": 280,
-      "wires": [
-        []
-      ]
-    },
-    {
       "id": "65abd5bc",
       "type": "table",
       "name": "Reactions",
