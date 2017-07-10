@@ -132,7 +132,7 @@
       "y": 200,
       "wires": [
         [
-          "65abd5bc"
+          "22827adc"
         ]
       ]
     },
@@ -164,7 +164,7 @@
       "y": 360,
       "wires": [
         [
-          "65abd5bc"
+          "22827adc"
         ]
       ]
     },
@@ -182,14 +182,14 @@
       ]
     },
     {
-      "id": "65abd5bc",
+      "id": "22827adc",
       "type": "table",
       "name": "Reactions",
       "hashKey": "user",
       "rangeKey": "timestamp",
       "rangeKeyType": "number",
-      "x": 820,
-      "y": 200,
+      "x": 810,
+      "y": 240,
       "wires": [
         []
       ]
