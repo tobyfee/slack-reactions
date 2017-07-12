@@ -4,7 +4,7 @@ const querystring = require('querystring');
 
 module.exports = function slackMessenger({ text, attachments }) {
   const postData = querystring.stringify({
-    token: 'xoxb-208403178736-ltUgJR1vruwFMwDD8za0HdCl',
+    token: SLACK_TOKEN,
     channel: 'general',
     text: text,
     attachments: attachments, 

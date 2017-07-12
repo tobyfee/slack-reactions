@@ -109,7 +109,9 @@
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
-      "envVars": {},
+      "envVars": {
+        "SLACK_TOKEN": "${config.slackToken}"
+      },
       "x": 910,
       "y": 360,
       "wires": []
