@@ -2,12 +2,12 @@ const stackery = require('stackery');
 const https = require('https');
 const querystring = require('querystring');
 
-module.exports = function slackMessenger(message, attachments = []) {
+module.exports = function slackMessenger({ text, attatchments }) {
   const postData = querystring.stringify({
     token: 'xoxb-208403178736-ltUgJR1vruwFMwDD8za0HdCl',
     channel: 'general',
     text: 'Hello fuckface',
-    attatchments: attachments, 
+    attatchments: attachmentsm, 
   });
   const options = {
     hostname: 'slack.com',
