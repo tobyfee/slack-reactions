@@ -27,7 +27,10 @@ module.exports = function slackMessenger(message = 'Testing...') {
       } else {
         const data = [];
         response.on('data', (chunk) => data.push(chunk));
-        response.on('end', () => resolve(data.join('')));
+        response.on('end', () => {
+          console.log(data.join(''));
+          resolve(data.join(''));
+        });
       }
     });
     request.on('error', (err) => {
