@@ -83,7 +83,7 @@
       "type": "timer",
       "name": "Timer",
       "timerType": "interval",
-      "intervalCount": 5,
+      "intervalCount": 2,
       "intervalUnit": "minutes",
       "x": 170,
       "y": 440,
