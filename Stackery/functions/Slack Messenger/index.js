@@ -9,7 +9,7 @@ module.exports = function slackMessenger(message = 'Testing...') {
     'text': message,
   });
   const options = {
-    host: 'https://slack.com',
+    hostname: 'slack.com',
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
