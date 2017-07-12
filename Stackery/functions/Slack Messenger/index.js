@@ -16,8 +16,11 @@ module.exports = function slackMessenger(message = 'Testing...') {
       'Content-Length': Buffer.byteLength(postData)
     }
   };
-
+  console.log('making request')
   const req = http.request(options);
+  console.log('writing to request')
   req.write(postData);
+  console.log('ending request')
   req.end();
+  return 'goodbye';
 }
