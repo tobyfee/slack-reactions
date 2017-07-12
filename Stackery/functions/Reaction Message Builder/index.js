@@ -1,6 +1,6 @@
 const stackery = require('stackery')
 
-module.exports = function reactionMessageBuilder(users) {
+module.exports = function reactionMessageBuilder({ users }) {
   let message = '';
   for (let user in users.sort((u1, u2) => u1.reactions.length - u2.reactions.length)) {
     message += `<@${user.id}>: `;
