@@ -5,6 +5,7 @@ module.exports = function reactionMessageBuilder({ users }) {
   console.log(users);
   for (let user of users) {
     text += `<@${user.id}>: `;
+    
   }
   return stackery.output({ text });
 }
