@@ -10,6 +10,7 @@ module.exports = function slackMessenger(message = 'Testing...') {
   });
   const options = {
     hostname: 'slack.com',
+    path: '/api/chat.postMessage',
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
