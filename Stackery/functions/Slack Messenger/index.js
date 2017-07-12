@@ -1,5 +1,5 @@
 const stackery = require('stackery');
-const http = require('http');
+const http = require('https');
 const querystring = require('querystring');
 
 module.exports = function slackMessenger(message = 'Testing...') {
