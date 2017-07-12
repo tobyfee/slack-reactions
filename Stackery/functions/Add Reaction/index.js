@@ -6,7 +6,8 @@ module.exports = function reactionCounter(event) {
     let user = result[0].records[0] ? result[0].records[0] : { id: event.item_user, reactions: [] };
     user.reactions.push({ type: event.reaction });
     console.log('putting', user);
-    stackery.output({ action: 'put', record: user }).then((result) => {
+    return stackery.output({ action: 'put', record: user }).then((result) => {
+      console.log('result from putting is ', result);
       return {};
     });
   });
