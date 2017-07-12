@@ -47,19 +47,6 @@
       ]
     },
     {
-      "id": "96b24c2c",
-      "type": "timer",
-      "name": "Timer",
-      "timerType": "interval",
-      "intervalCount": 2,
-      "intervalUnit": "minutes",
-      "x": 170,
-      "y": 440,
-      "wires": [
-        []
-      ]
-    },
-    {
       "id": "7b3e9240",
       "type": "function",
       "name": "Statuss",
