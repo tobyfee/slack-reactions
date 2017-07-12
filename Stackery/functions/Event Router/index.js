@@ -2,16 +2,16 @@ const stackery = require('stackery')
 
 module.exports = function eventRouter(message) {
   const body = JSON.parse(message.body.toString());
-  console.log('Routing: ', body);
+  const output = (port, data) => stackery.output(data, { port, waitFor: 'TRANSMISSION' }).then(() => ({ statusCode: 204 }));
   switch (body.type) {
     case 'url_verification':
-      return stackery.output(body, { port: 0, waitFor: 'TRANSMISSON' });
-    case 'event_callback': 
+      return output(0, body);
+    case 'event_callback':
       switch (body.event.type) {
         case 'reaction_added':
-          return stackery.output(body.event, { port: 1, waitFor: 'TRANSMISSON' });
+          return output(1, body.event);
         case 'reaction_removed':
-          return stackery.output(body.event, { port: 1, waitFor: 'TRANSMISSON' });
+          return output(2, body.event);
         default:
           throw new Error('Unrecognized event callback: ', body.event);
       }
