@@ -6,8 +6,8 @@
       "name": "Events",
       "path": "/events",
       "domain": "stackery.nomadfree.com",
-      "x": 190,
-      "y": 200,
+      "x": 110,
+      "y": 140,
       "wires": [
         [
           "86cff916"
@@ -38,43 +38,11 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 480,
-      "y": 180,
+      "x": 360,
+      "y": 140,
       "wires": [
         [
-          "22827adc"
-        ]
-      ]
-    },
-    {
-      "id": "48029385",
-      "type": "restApi",
-      "name": "Reactions",
-      "path": "/reactions",
-      "domain": "stackery.nomadfree.com",
-      "x": 200,
-      "y": 240,
-      "wires": [
-        [
-          "703ee1e4"
-        ]
-      ]
-    },
-    {
-      "id": "703ee1e4",
-      "type": "function",
-      "name": "Individual Status",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "x": 470,
-      "y": 240,
-      "wires": [
-        [
-          "22827adc"
+          "672f517b"
         ]
       ]
     },
@@ -94,19 +62,6 @@
       ]
     },
     {
-      "id": "22827adc",
-      "type": "table",
-      "name": "Reactions",
-      "hashKey": "user",
-      "rangeKey": "timestamp",
-      "rangeKeyType": "number",
-      "x": 810,
-      "y": 240,
-      "wires": [
-        []
-      ]
-    },
-    {
       "id": "7b3e9240",
       "type": "function",
       "name": "Statuss",
@@ -116,11 +71,11 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 380,
-      "y": 320,
+      "x": 340,
+      "y": 220,
       "wires": [
         [
-          "22827adc"
+          "672f517b"
         ],
         [
           "e8563344"
@@ -134,8 +89,8 @@
       "timerType": "interval",
       "intervalCount": 1,
       "intervalUnit": "minutes",
-      "x": 190,
-      "y": 320,
+      "x": 130,
+      "y": 220,
       "wires": [
         [
           "7b3e9240"
@@ -152,8 +107,8 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 620,
-      "y": 360,
+      "x": 600,
+      "y": 300,
       "wires": [
         []
       ]
@@ -170,6 +125,17 @@
       "envVars": {},
       "x": 590,
       "y": 440,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "672f517b",
+      "type": "table",
+      "name": "Users",
+      "hashKey": "id",
+      "x": 570,
+      "y": 180,
       "wires": [
         []
       ]
