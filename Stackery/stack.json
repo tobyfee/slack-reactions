@@ -49,7 +49,7 @@
     {
       "id": "7b3e9240",
       "type": "function",
-      "name": "Statuss",
+      "name": "Status",
       "outputs": 2,
       "memorySize": 128,
       "timeout": 30,
