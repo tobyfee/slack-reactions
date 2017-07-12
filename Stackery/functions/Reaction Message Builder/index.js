@@ -7,7 +7,7 @@ module.exports = function reactionMessageBuilder({ users }) {
     console.log('reactions are', user.reactions);
     text += `<@${user.id}>: `;
     for (let reaction of user.reactions) {
-      text += `:${reaction.type}`;
+      text += `:${reaction.type}:`;
     }
     text += '\n'
   }
