@@ -10,6 +10,6 @@ module.exports = function eventRouter(message) {
     case 'reaction_removed':
       return stackery.output(body.event, { port: 2 });
     default:
-      throw new Error('Unrecognized event: ', event);
+      throw new Error('Unrecognized event: ', body.event);
   }
 }
