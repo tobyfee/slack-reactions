@@ -4,7 +4,7 @@ const querystring = require('querystring');
 
 module.exports = function slackMessenger(message = 'Testing...') {
   const postData = querystring.stringify({
-    'token': 'bjl16TxNV1KRSoQKBd4StXhZ',
+    'token': 'f7e228831191bcc09313489761afa6a1',
     'channel': 'general',
     'text': message,
   });
