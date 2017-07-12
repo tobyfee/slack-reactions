@@ -6,7 +6,7 @@ module.exports = function slackMessenger(message = 'Testing...') {
   const postData = querystring.stringify({
     'token': 'xoxb-208403178736-ltUgJR1vruwFMwDD8za0HdCl',
     'channel': 'general',
-    'text': message,
+    'text': 'Hello fuckface',
   });
   const options = {
     hostname: 'slack.com',
