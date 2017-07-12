@@ -6,8 +6,8 @@
       "name": "Events",
       "path": "/events",
       "domain": "stackery.nomadfree.com",
-      "x": 110,
-      "y": 140,
+      "x": 90,
+      "y": 120,
       "wires": [
         [
           "d6fe555d"
@@ -24,7 +24,7 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 490,
+      "x": 470,
       "y": 60,
       "wires": []
     },
@@ -56,8 +56,8 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 340,
-      "y": 220,
+      "x": 350,
+      "y": 260,
       "wires": [
         [
           "12b46862"
@@ -75,7 +75,7 @@
       "intervalCount": 1,
       "intervalUnit": "minutes",
       "x": 130,
-      "y": 220,
+      "y": 260,
       "wires": [
         [
           "7b3e9240"
@@ -93,7 +93,7 @@
       "location": "inline",
       "envVars": {},
       "x": 600,
-      "y": 300,
+      "y": 320,
       "wires": [
         [
           "28d8e4ab"
@@ -110,8 +110,8 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 890,
-      "y": 300,
+      "x": 910,
+      "y": 360,
       "wires": []
     },
     {
@@ -136,7 +136,7 @@
       "location": "inline",
       "envVars": {},
       "x": 470,
-      "y": 160,
+      "y": 180,
       "wires": [
         []
       ]
@@ -145,20 +145,34 @@
       "id": "d6fe555d",
       "type": "function",
       "name": "Event Router",
-      "outputs": 2,
+      "outputs": 3,
       "memorySize": 128,
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 270,
-      "y": 140,
+      "x": 230,
+      "y": 120,
       "wires": [
+        [
+          "fb98fad6"
+        ],
         [
           "86cff916"
         ],
         [
           "125b6bcb"
+        ]
+      ]
+    },
+    {
+      "id": "e4738a60",
+      "type": "errors",
+      "x": 670,
+      "y": 420,
+      "wires": [
+        [
+          "28d8e4ab"
         ]
       ]
     }

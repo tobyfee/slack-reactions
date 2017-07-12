@@ -1,13 +1,15 @@
 const stackery = require('stackery')
 
 module.exports = function eventRouter(message) {
-  const event = JSON.parse(message.body.toString()).event;
-  switch (event.type) {
+  const body = JSON.parse(message.body.toString());
+  switch (body.type || body.event.type) {
+    case 'url_verification':
+      return stackery.output(body, { port: 0 });
     case 'reaction_added': 
-      return stackery.output(event, { port: 0 });
+      return stackery.output(body.event, { port: 1 });
     case 'reaction_removed':
-      return stackery.output(event, { port: 1 });
+      return stackery.output(body.event, { port: 2 });
     default:
-      return stackery.output(event, { port: 2 });
+      throw new Error('Unrecognized event: ', event);
   }
 }
