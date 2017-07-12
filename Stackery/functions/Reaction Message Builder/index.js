@@ -9,5 +9,6 @@ module.exports = function reactionMessageBuilder({ users }) {
     //   message += `:${reaction.name}: x${reaction.count}`;
     // }
   }
-  stackery.output({ text });
+  console.log('sending ', text);
+  return stackery.output({ text, attachments: [] });
 }

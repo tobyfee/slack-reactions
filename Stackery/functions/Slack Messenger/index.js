@@ -6,7 +6,7 @@ module.exports = function slackMessenger({ text, attatchments }) {
   const postData = querystring.stringify({
     token: 'xoxb-208403178736-ltUgJR1vruwFMwDD8za0HdCl',
     channel: 'general',
-    text: 'Hello fuckface',
+    text: text,
     attatchments: attachmentsm, 
   });
   const options = {
