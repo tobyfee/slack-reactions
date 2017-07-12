@@ -31,11 +31,6 @@ module.exports = function slackMessenger(message = 'Testing...') {
   req.on('error', (e) => {
     console.error(`problem with request: ${e.message}`);
   });
-  
-  console.log('writing data')
-
   req.write(postData);
-  console.log('ending request')
   req.end();
-  return 'goodbye';
 }
