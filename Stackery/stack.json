@@ -42,7 +42,7 @@
       "y": 120,
       "wires": [
         [
-          "12b46862"
+          "8088993b"
         ]
       ]
     },
@@ -60,7 +60,7 @@
       "y": 260,
       "wires": [
         [
-          "12b46862"
+          "8088993b"
         ],
         [
           "e8563344"
@@ -117,17 +117,6 @@
       "wires": []
     },
     {
-      "id": "12b46862",
-      "type": "table",
-      "name": "Users",
-      "hashKey": "id",
-      "x": 790,
-      "y": 180,
-      "wires": [
-        []
-      ]
-    },
-    {
       "id": "125b6bcb",
       "type": "function",
       "name": "Remove Reaction",
@@ -176,6 +165,17 @@
         [
           "28d8e4ab"
         ]
+      ]
+    },
+    {
+      "id": "8088993b",
+      "type": "table",
+      "name": "Users",
+      "hashKey": "id",
+      "x": 830,
+      "y": 160,
+      "wires": [
+        []
       ]
     }
   ]
