@@ -10,7 +10,7 @@
       "y": 140,
       "wires": [
         [
-          "86cff916"
+          "d6fe555d"
         ]
       ]
     },
@@ -31,15 +31,15 @@
     {
       "id": "86cff916",
       "type": "function",
-      "name": "Event Handler",
+      "name": "Add Reaction",
       "outputs": 1,
       "memorySize": 128,
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 360,
-      "y": 140,
+      "x": 460,
+      "y": 120,
       "wires": [
         [
           "12b46862"
@@ -119,10 +119,47 @@
       "type": "table",
       "name": "Users",
       "hashKey": "id",
-      "x": 600,
+      "x": 790,
       "y": 180,
       "wires": [
         []
+      ]
+    },
+    {
+      "id": "125b6bcb",
+      "type": "function",
+      "name": "Remove Reaction",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 470,
+      "y": 160,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "d6fe555d",
+      "type": "function",
+      "name": "Event Router",
+      "outputs": 2,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 270,
+      "y": 140,
+      "wires": [
+        [
+          "86cff916"
+        ],
+        [
+          "125b6bcb"
+        ]
       ]
     }
   ]
