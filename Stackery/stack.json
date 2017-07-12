@@ -1,34 +1,6 @@
 {
   "nodes": [
     {
-      "id": "7e6effd",
-      "type": "restApi",
-      "name": "Interactions",
-      "path": "/interactions",
-      "domain": "stackery.nomadfree.com",
-      "x": 210,
-      "y": 80,
-      "wires": [
-        [
-          "eb5f26fe"
-        ]
-      ]
-    },
-    {
-      "id": "be2b7408",
-      "type": "restApi",
-      "name": "Options",
-      "path": "/options",
-      "domain": "stackery.nomadfree.com",
-      "x": 190,
-      "y": 140,
-      "wires": [
-        [
-          "eb5f26fe"
-        ]
-      ]
-    },
-    {
       "id": "a622d10f",
       "type": "restApi",
       "name": "Events",
@@ -43,38 +15,6 @@
       ]
     },
     {
-      "id": "eb5f26fe",
-      "type": "function",
-      "name": "URL Verification",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 2,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "x": 540,
-      "y": 80,
-      "wires": [
-        []
-      ]
-    },
-    {
-      "id": "8ac50694",
-      "type": "function",
-      "name": "Interaction Handler",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "x": 830,
-      "y": 80,
-      "wires": [
-        []
-      ]
-    },
-    {
       "id": "fb98fad6",
       "type": "function",
       "name": "Challenge Verifier",
@@ -85,38 +25,8 @@
       "location": "inline",
       "envVars": {},
       "x": 490,
-      "y": 140,
+      "y": 60,
       "wires": []
-    },
-    {
-      "id": "f1427869",
-      "type": "restApi",
-      "name": "Test",
-      "path": "/test",
-      "domain": "stackery.nomadfree.com",
-      "x": 200,
-      "y": 280,
-      "wires": [
-        [
-          "60f56864"
-        ]
-      ]
-    },
-    {
-      "id": "60f56864",
-      "type": "function",
-      "name": "Test",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "x": 370,
-      "y": 280,
-      "wires": [
-        []
-      ]
     },
     {
       "id": "86cff916",
@@ -128,8 +38,8 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 450,
-      "y": 200,
+      "x": 480,
+      "y": 180,
       "wires": [
         [
           "22827adc"
@@ -142,8 +52,8 @@
       "name": "Reactions",
       "path": "/reactions",
       "domain": "stackery.nomadfree.com",
-      "x": 210,
-      "y": 360,
+      "x": 200,
+      "y": 240,
       "wires": [
         [
           "703ee1e4"
@@ -153,15 +63,15 @@
     {
       "id": "703ee1e4",
       "type": "function",
-      "name": "Status",
+      "name": "Individual Status",
       "outputs": 1,
       "memorySize": 128,
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 410,
-      "y": 360,
+      "x": 470,
+      "y": 240,
       "wires": [
         [
           "22827adc"
@@ -175,10 +85,12 @@
       "timerType": "interval",
       "intervalCount": 5,
       "intervalUnit": "minutes",
-      "x": 230,
-      "y": 500,
+      "x": 170,
+      "y": 440,
       "wires": [
-        []
+        [
+          "28d8e4ab"
+        ]
       ]
     },
     {
@@ -190,6 +102,74 @@
       "rangeKeyType": "number",
       "x": 810,
       "y": 240,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "7b3e9240",
+      "type": "function",
+      "name": "Statuss",
+      "outputs": 2,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 380,
+      "y": 320,
+      "wires": [
+        [
+          "22827adc"
+        ],
+        [
+          "e8563344"
+        ]
+      ]
+    },
+    {
+      "id": "b54e2542",
+      "type": "timer",
+      "name": "",
+      "timerType": "interval",
+      "intervalCount": 1,
+      "intervalUnit": "minutes",
+      "x": 190,
+      "y": 320,
+      "wires": [
+        [
+          "7b3e9240"
+        ]
+      ]
+    },
+    {
+      "id": "e8563344",
+      "type": "function",
+      "name": "Reaction Message Builder",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 620,
+      "y": 360,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "28d8e4ab",
+      "type": "function",
+      "name": "Slack Messenger",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 590,
+      "y": 440,
       "wires": [
         []
       ]
