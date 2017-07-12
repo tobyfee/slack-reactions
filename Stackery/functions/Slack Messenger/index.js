@@ -16,21 +16,25 @@ module.exports = function slackMessenger(message = 'Testing...') {
       'Content-Length': Buffer.byteLength(postData)
     }
   };
-  const req = http.request(options, (res) => {
-    console.log(`STATUS: ${res.statusCode}`);
-    console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
-    res.setEncoding('utf8');
-    res.on('data', (chunk) => {
-      console.log(`BODY: ${chunk}`);
+
+  // is a promise really necessary here?
+  return new Promise((resolve, reject) => {
+    const request = https.request(options, (response) => {
+      if (response.statusCode < 200 || response.statusCode > 299) {
+        const err = new Error(`Request failed (${response.statusCode})`);
+        console.log(err);
+        reject(err);
+      } else {
+        const data = [];
+        response.on('data', (chunk) => data.push(chunk));
+        response.on('end', () => resolve(data.join('')));
+      }
     });
-    res.on('end', () => {
-      console.log('No more data in response.');
+    request.on('error', (err) => {
+      console.log(err);
+      reject(err);
     });
-  });
-  
-  req.on('error', (e) => {
-    console.error(`problem with request: ${e.message}`);
-  });
-  req.write(postData);
-  req.end();
+    request.write(postData);
+    request.end();
+  }); 
 }
