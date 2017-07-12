@@ -2,6 +2,7 @@ const stackery = require('stackery')
 
 module.exports = function eventRouter(message) {
   const body = JSON.parse(message.body.toString());
+  console.log('body is ', body);
   switch (body.type || body.event.type) {
     case 'url_verification':
       return stackery.output(body, { port: 0 });
