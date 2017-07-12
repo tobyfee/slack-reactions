@@ -73,7 +73,7 @@
       "name": "",
       "timerType": "interval",
       "intervalCount": 1,
-      "intervalUnit": "hours",
+      "intervalUnit": "minutes",
       "x": 130,
       "y": 220,
       "wires": [
