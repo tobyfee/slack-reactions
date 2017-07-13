@@ -70,10 +70,10 @@
     {
       "id": "b54e2542",
       "type": "timer",
-      "name": "Kickoff Report",
+      "name": "Regular Kickoff",
       "timerType": "cron",
       "cron": "0/2 * * * ? *",
-      "x": 150,
+      "x": 160,
       "y": 260,
       "wires": [
         [
