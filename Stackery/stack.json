@@ -93,8 +93,8 @@
       "envVars": {
         "SLACK_TOKEN": "${config.slackToken}"
       },
-      "x": 910,
-      "y": 360,
+      "x": 890,
+      "y": 260,
       "wires": []
     },
     {
@@ -142,8 +142,8 @@
     {
       "id": "e4738a60",
       "type": "errors",
-      "x": 670,
-      "y": 420,
+      "x": 430,
+      "y": 380,
       "wires": [
         [
           "28d8e4ab"
