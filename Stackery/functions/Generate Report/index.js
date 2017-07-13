@@ -6,10 +6,10 @@ module.exports = function reportGenerator(message) {
     let users = result[0].records;
     for (let user of users) {
       report += `<@${user.id}>: `;
-      report += user.reactions.map((rxn) => `:${rxn.type}:`).join('');
+      delete user.id;
+      report += Object.keys(user).map((rxn) => `:${rxn}:`).join('');
       report += '\n'
-      
     }
-    return stackery.output({ text: report }, { port: 1 }).then(() => {});
+    return stackery.output({ text: report }, { port: 1 });
   });
 }
