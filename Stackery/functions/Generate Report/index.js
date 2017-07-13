@@ -7,6 +7,7 @@ module.exports = function reportGenerator(message) {
     for (let user of users) {
       report += `<@${user.id}>: `;
       delete user.id;
+      console.log(user);
       report += Object.keys(user).map((rxn) => `:${rxn.slice(1)}:`).join('');
       report += '\n'
     }

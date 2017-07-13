@@ -8,7 +8,7 @@ module.exports = function reactionCounter(event) {
     case 'reaction_added':
       return stackery.output({ action , where, increment: { ['_' + event.reaction]: 1 } });
     case 'reaction_removed':
-      console.log('decrementing reaction ' + event.reaction);
+      console.log({ action , where, increment: { ['_' + event.reaction]: -1 } });
       return stackery.output({ action , where, increment: { ['_' + event.reaction]: -1 } });
     default:
       throw new Error('Unknown event type: ' + event.type);
