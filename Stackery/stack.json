@@ -28,7 +28,7 @@
       "y": 260,
       "wires": [
         [
-          "c8da4668"
+          "17c6724d"
         ],
         [
           "28d8e4ab"
@@ -86,17 +86,6 @@
       ]
     },
     {
-      "id": "c8da4668",
-      "type": "table",
-      "name": "Users",
-      "hashKey": "id",
-      "x": 770,
-      "y": 200,
-      "wires": [
-        []
-      ]
-    },
-    {
       "id": "c359bdff",
       "type": "function",
       "name": "Handle Event",
@@ -110,8 +99,19 @@
       "y": 120,
       "wires": [
         [
-          "c8da4668"
+          "17c6724d"
         ]
+      ]
+    },
+    {
+      "id": "17c6724d",
+      "type": "table",
+      "name": "Users",
+      "hashKey": "id",
+      "x": 820,
+      "y": 200,
+      "wires": [
+        []
       ]
     }
   ]
