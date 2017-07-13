@@ -1,11 +1,11 @@
-const stackery = require('stackery')
+const stackery = require('stackery');
+const crypto = require('crypto');
 
 module.exports = function reactionCounter(event) {
-  console.log('Trying to select where ', { id: event.item_user });
   return stackery.output({ action: 'select', where: { id: event.item_user } }).then((result) => {
-    console.log('result from here is', result)
     let user = result[0].records[0] ? result[0].records[0] : { id: event.item_user, reactions: [] };
-    console.log('Event is ', event);
+    let item_hash = crypto.createHash('md5').update(JSON.stringify(event.item)).digest('hex');
+    user.reactions = user.reactions.filter((rxn) => rxn.item_hash != item_hash);
     return {}
   });
 }
