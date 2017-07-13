@@ -124,7 +124,9 @@
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
-      "envVars": {},
+      "envVars": {
+        "VERIFICATION_TOKEN": "${config.slackVerificationToken}"
+      },
       "x": 230,
       "y": 120,
       "wires": [

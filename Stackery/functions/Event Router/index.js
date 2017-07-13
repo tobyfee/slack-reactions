@@ -3,6 +3,9 @@ const stackery = require('stackery')
 module.exports = function eventRouter(message) {
   const body = JSON.parse(message.body.toString());
   const output = (port, data) => stackery.output(data, { port, waitFor: 'TRANSMISSION' }).then(() => ({ statusCode: 204 }));
+  if (body.token != process.env.VERIFICATION_TOKEN) {
+    throw new Error('Invalid Verification Token received from Slack!');
+  }
   switch (body.type) {
     case 'url_verification':
       return output(0, body);
