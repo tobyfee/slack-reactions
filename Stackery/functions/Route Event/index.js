@@ -2,23 +2,18 @@ const stackery = require('stackery')
 
 module.exports = function eventRouter(message) {
   const body = JSON.parse(message.body.toString());
-  const output = (port, data) => stackery.output(data, { port, waitFor: 'TRANSMISSION' }).then(() => ({ statusCode: 204 }));
   if (body.token != process.env.VERIFICATION_TOKEN) {
     throw new Error('Invalid Verification Token received from Slack!');
   }
   switch (body.type) {
     case 'url_verification':
-      return output(0, body);
+      return body.challenge;
     case 'event_callback':
-      switch (body.event.type) {
-        case 'reaction_added':
-          return output(1, body.event);
-        case 'reaction_removed':
-          console.log('responding to reaction removed event')
-          return output(2, body.event);
-        default:
-          throw new Error('Unrecognized event callback: ', body.event);
-      }
+      // Here, we use Stackery's waitFor parameter to specify that we
+      // want to return as soon as the message is transmitted, rather
+      // than waiting for the promise to resolve, because we need to
+      // make sure that we respond to Slack within three seconds
+      return stackery.output(body.event, { port, waitFor: 'TRANSMISSION' }).then(() => ({ statusCode: 204 }));
     default:
       throw new Error('Unrecognized event type: ', body);
   }
