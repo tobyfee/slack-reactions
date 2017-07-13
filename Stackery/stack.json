@@ -91,7 +91,7 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {
-        "SLACK_TOKEN": "${config.slackToken}"
+        "SLACK_TOKEN": "${config.slackOauthToken}"
       },
       "x": 710,
       "y": 320,
