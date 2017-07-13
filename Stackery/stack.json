@@ -172,7 +172,6 @@
       "type": "table",
       "name": "Users",
       "hashKey": "id",
-      "expirationKey": "expiration",
       "x": 850,
       "y": 160,
       "wires": [
