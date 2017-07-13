@@ -11,6 +11,7 @@ module.exports = function eventRouter(message) {
         case 'reaction_added':
           return output(1, body.event);
         case 'reaction_removed':
+          console.log('responding to reaction removed event')
           return output(2, body.event);
         default:
           throw new Error('Unrecognized event callback: ', body.event);
