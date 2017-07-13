@@ -49,21 +49,21 @@
     {
       "id": "7b3e9240",
       "type": "function",
-      "name": "Status",
+      "name": "Report Generator",
       "outputs": 2,
       "memorySize": 128,
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 350,
+      "x": 390,
       "y": 260,
       "wires": [
         [
           "c8da4668"
         ],
         [
-          "e8563344"
+          "28d8e4ab"
         ]
       ]
     },
@@ -78,24 +78,6 @@
       "wires": [
         [
           "7b3e9240"
-        ]
-      ]
-    },
-    {
-      "id": "e8563344",
-      "type": "function",
-      "name": "Reaction Message Builder",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "x": 600,
-      "y": 320,
-      "wires": [
-        [
-          "28d8e4ab"
         ]
       ]
     },

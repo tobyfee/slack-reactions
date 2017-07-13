@@ -9,6 +9,6 @@ module.exports = function reportGenerator(message) {
       report += user.reactions.map((rxn) => `:${reaction.type}:`).join('');
       report += '\n'
     }
-    return stackery.output({ text: report });
+    return stackery.output({ text: report }, { port: 0 });
   });
 }
