@@ -140,17 +140,6 @@
       ]
     },
     {
-      "id": "e4738a60",
-      "type": "errors",
-      "x": 430,
-      "y": 380,
-      "wires": [
-        [
-          "28d8e4ab"
-        ]
-      ]
-    },
-    {
       "id": "c8da4668",
       "type": "table",
       "name": "Users",
@@ -160,35 +149,6 @@
       "wires": [
         []
       ]
-    },
-    {
-      "id": "91ae237a",
-      "type": "timer",
-      "name": "Some Timer",
-      "timerType": "interval",
-      "intervalCount": 1,
-      "intervalUnit": "minutes",
-      "x": 110,
-      "y": 360,
-      "wires": [
-        [
-          "fd7addd8"
-        ]
-      ]
-    },
-    {
-      "id": "fd7addd8",
-      "type": "function",
-      "name": "Error Generator",
-      "outputs": 0,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "x": 300,
-      "y": 360,
-      "wires": []
     }
   ]
 }
