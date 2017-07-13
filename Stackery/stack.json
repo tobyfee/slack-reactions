@@ -72,7 +72,7 @@
       "type": "timer",
       "name": "",
       "timerType": "cron",
-      "cron": "* * * * * * ",
+      "cron": "0/2 * * * ? *",
       "x": 130,
       "y": 260,
       "wires": [
