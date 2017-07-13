@@ -6,9 +6,9 @@ module.exports = function reactionCounter(event) {
   const where = { id: event.item_user };
   switch (event.type) {
     case 'reaction_added':
-      return stackery.output({ action , where, increment: { ['_' + reaction.type]: 1 } });
+      return stackery.output({ action , where, increment: { ['_' + event.reaction]: 1 } });
     case 'reaction_removed':
-      return stackery.output({ action , where, increment: { ['_' + reaction.type]: -1 } });
+      return stackery.output({ action , where, increment: { ['_' + event.reaction]: -1 } });
     default:
       throw new Error('Unknown event type: ' + event.type);
   }
