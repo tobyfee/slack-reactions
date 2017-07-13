@@ -71,9 +71,8 @@
       "id": "b54e2542",
       "type": "timer",
       "name": "",
-      "timerType": "interval",
-      "intervalCount": 1,
-      "intervalUnit": "minutes",
+      "timerType": "cron",
+      "cron": "* * * * * * ",
       "x": 130,
       "y": 260,
       "wires": [
