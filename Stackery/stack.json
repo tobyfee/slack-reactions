@@ -93,8 +93,8 @@
       "envVars": {
         "SLACK_TOKEN": "${config.slackToken}"
       },
-      "x": 890,
-      "y": 260,
+      "x": 690,
+      "y": 320,
       "wires": []
     },
     {
@@ -155,11 +155,40 @@
       "type": "table",
       "name": "Users",
       "hashKey": "id",
-      "x": 850,
-      "y": 220,
+      "x": 830,
+      "y": 200,
       "wires": [
         []
       ]
+    },
+    {
+      "id": "91ae237a",
+      "type": "timer",
+      "name": "Some Timer",
+      "timerType": "interval",
+      "intervalCount": 1,
+      "intervalUnit": "minutes",
+      "x": 110,
+      "y": 360,
+      "wires": [
+        [
+          "fd7addd8"
+        ]
+      ]
+    },
+    {
+      "id": "fd7addd8",
+      "type": "function",
+      "name": "Error Generator",
+      "outputs": 0,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "x": 300,
+      "y": 360,
+      "wires": []
     }
   ]
 }
