@@ -7,7 +7,7 @@ module.exports = function reportGenerator(message) {
     for (let user of users) {
       report += `<@${user.id}>: `;
       delete user.id;
-      report += Object.keys(user).map((rxn) => `:${rxn}:`).join('');
+      report += Object.keys(user).map((rxn) => `:${rxn.slice(1)}:`).join('');
       report += '\n'
     }
     return stackery.output({ text: report }, { port: 1 });
