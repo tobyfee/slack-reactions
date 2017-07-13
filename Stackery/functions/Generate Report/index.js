@@ -8,7 +8,8 @@ module.exports = function reportGenerator(message) {
       report += `<@${user.id}>: `;
       report += user.reactions.map((rxn) => `:${rxn.type}:`).join('');
       report += '\n'
+      
     }
-    return stackery.output({ text: report }, { port: 1 }).then(() => ({}));
+    return stackery.output({ text: report }, { port: 1 }).then(() => {});
   });
 }
