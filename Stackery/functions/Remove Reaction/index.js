@@ -5,6 +5,7 @@ module.exports = function reactionCounter(event) {
   return stackery.output({ action: 'select', where: { id: event.item_user } }).then((result) => {
     let user = result[0].records[0] ? result[0].records[0] : { id: event.item_user, reactions: [] };
     let item_hash = crypto.createHash('md5').update(JSON.stringify(event.item)).digest('hex');
+    console.log('Item hash of ', event.item, ' is ', item_hash);
     user.reactions = user.reactions.filter((rxn) => rxn.item_hash != item_hash);
     return {}
   });
