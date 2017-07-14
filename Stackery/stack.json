@@ -40,7 +40,7 @@
       "type": "timer",
       "name": "Regular Kickoff",
       "timerType": "cron",
-      "cron": "0/2 * * * ? *",
+      "cron": "0 17 * * ? *",
       "x": 160,
       "y": 260,
       "wires": [
