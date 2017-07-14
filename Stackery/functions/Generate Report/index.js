@@ -7,7 +7,7 @@ module.exports = function reportGenerator(message) {
     for (let user of users) {
       report += `<@${user.id}>: `;
       for (let reaction of Object.keys(user).filter(k => k.startsWith(':'))) {
-        report += reaction.repeat(user[reaction]);
+        report += reaction.repeat(Math.max(0, user[reaction]));
       }
     }
     return stackery.output({ text: report }, { port: 1 });
