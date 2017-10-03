@@ -61,7 +61,7 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {
-        "SLACK_TOKEN": "${config.slackOauthToken}"
+        "SLACK_TOKEN": "${config.slack.oauthToken}"
       },
       "wires": [
         []
@@ -79,7 +79,7 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {
-        "VERIFICATION_TOKEN": "${config.slackVerificationToken}"
+        "VERIFICATION_TOKEN": "${config.slack.verificationToken}"
       },
       "wires": [
         [
