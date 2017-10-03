@@ -3,11 +3,11 @@
     {
       "id": "a622d10f",
       "type": "restApi",
-      "name": "Events",
-      "path": "/events",
-      "domain": "stackery.nomadfree.com",
-      "x": 130,
+      "x": 140,
       "y": 120,
+      "name": "",
+      "path": "/events",
+      "method": "POST",
       "wires": [
         [
           "d6fe555d"
@@ -17,6 +17,8 @@
     {
       "id": "7b3e9240",
       "type": "function",
+      "x": 370,
+      "y": 260,
       "name": "Generate Report",
       "outputs": 2,
       "memorySize": 128,
@@ -24,8 +26,6 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 370,
-      "y": 260,
       "wires": [
         [
           "17c6724d"
@@ -38,11 +38,11 @@
     {
       "id": "b54e2542",
       "type": "timer",
-      "name": "Regular Kickoff",
-      "timerType": "cron",
-      "cron": "0 17 * * ? *",
       "x": 160,
       "y": 260,
+      "name": "At 5PM Each Day",
+      "timerType": "cron",
+      "cron": "0 17 * * ? *",
       "wires": [
         [
           "7b3e9240"
@@ -52,6 +52,8 @@
     {
       "id": "28d8e4ab",
       "type": "function",
+      "x": 710,
+      "y": 320,
       "name": "Message Slack Channel",
       "outputs": 0,
       "memorySize": 128,
@@ -61,13 +63,15 @@
       "envVars": {
         "SLACK_TOKEN": "${config.slackOauthToken}"
       },
-      "x": 710,
-      "y": 320,
-      "wires": []
+      "wires": [
+        []
+      ]
     },
     {
       "id": "d6fe555d",
       "type": "function",
+      "x": 330,
+      "y": 120,
       "name": "Route Event",
       "outputs": 1,
       "memorySize": 128,
@@ -77,8 +81,6 @@
       "envVars": {
         "VERIFICATION_TOKEN": "${config.slackVerificationToken}"
       },
-      "x": 310,
-      "y": 120,
       "wires": [
         [
           "c359bdff"
@@ -88,6 +90,8 @@
     {
       "id": "c359bdff",
       "type": "function",
+      "x": 520,
+      "y": 120,
       "name": "Handle Event",
       "outputs": 1,
       "memorySize": 128,
@@ -95,8 +99,6 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "x": 520,
-      "y": 120,
       "wires": [
         [
           "17c6724d"
@@ -106,10 +108,11 @@
     {
       "id": "17c6724d",
       "type": "table",
-      "name": "Users",
-      "hashKey": "id",
       "x": 820,
       "y": 200,
+      "name": "Users",
+      "hashKey": "id",
+      "hashKeyType": "string",
       "wires": [
         []
       ]
