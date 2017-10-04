@@ -42,7 +42,7 @@
       "y": 260,
       "name": "At 5PM Each Day",
       "timerType": "cron",
-      "cron": "0 17 * * ? *",
+      "cron": "0 0 * * ? *",
       "wires": [
         [
           "7b3e9240"
