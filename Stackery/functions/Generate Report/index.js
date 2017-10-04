@@ -9,7 +9,7 @@ module.exports = function reportGenerator(message) {
       
       // Generate Slack reaction report message
       for (let user of users) {
-        report += `\n${user.id}: `;
+        report += `\n<${user.id}>: `;
         for (let reaction of Object.keys(user).filter(k => k.startsWith(':'))) {
           report += reaction.repeat(Math.max(0, user[reaction]));
         }
