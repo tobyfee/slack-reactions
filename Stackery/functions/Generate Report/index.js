@@ -4,12 +4,12 @@ module.exports = function reportGenerator(message) {
   // Get reaction records from connected Table
   return stackery.output({ action: 'select' })
     .then(result => {
-      let report = '';
+      let report = 'Reactions Today:';
       let users = result[0].records;
       
       // Generate Slack reaction report message
       for (let user of users) {
-        report += `<@${user.id}>: `;
+        report += `\n${user.id}: `;
         for (let reaction of Object.keys(user).filter(k => k.startsWith(':'))) {
           report += reaction.repeat(Math.max(0, user[reaction]));
         }
