@@ -2,6 +2,8 @@ const stackery = require('stackery');
 const crypto = require('crypto');
 
 module.exports = function reactionCounter(event) {
+  console.dir(event);
+  
   switch (event.type) {
     case 'reaction_added':
       return stackery.output({
