@@ -143,22 +143,6 @@
       "wires": [
         []
       ]
-    },
-    {
-      "id": "6279208",
-      "type": "function",
-      "x": 160,
-      "y": 542,
-      "name": "New Function",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "wires": [
-        []
-      ]
     }
   ]
 }
