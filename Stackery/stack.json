@@ -143,6 +143,43 @@
       "wires": [
         []
       ]
+    },
+    {
+      "id": "fa01d644",
+      "type": "restApi",
+      "x": 146,
+      "y": 695,
+      "wires": [
+        [
+          "27ddbf57"
+        ]
+      ]
+    },
+    {
+      "id": "27ddbf57",
+      "type": "function",
+      "x": 356,
+      "y": 688,
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "location": "inline",
+      "envVars": {},
+      "wires": [
+        [
+          "c057481f"
+        ]
+      ]
+    },
+    {
+      "id": "c057481f",
+      "type": "stream",
+      "x": 551,
+      "y": 690,
+      "shardCount": 1,
+      "wires": [
+        []
+      ]
     }
   ]
 }
