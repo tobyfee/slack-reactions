@@ -145,38 +145,17 @@
       ]
     },
     {
-      "id": "fa01d644",
-      "type": "restApi",
-      "x": 146,
-      "y": 695,
-      "wires": [
-        [
-          "27ddbf57"
-        ]
-      ]
-    },
-    {
-      "id": "27ddbf57",
+      "id": "7a3e1789",
       "type": "function",
-      "x": 356,
-      "y": 688,
+      "x": 660,
+      "y": 432,
+      "name": "Arun",
       "outputs": 1,
       "memorySize": 128,
       "timeout": 30,
+      "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
-      "wires": [
-        [
-          "c057481f"
-        ]
-      ]
-    },
-    {
-      "id": "c057481f",
-      "type": "stream",
-      "x": 551,
-      "y": 690,
-      "shardCount": 1,
       "wires": [
         []
       ]
