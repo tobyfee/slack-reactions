@@ -151,9 +151,11 @@
       "type": "function",
       "x": 700,
       "y": 427,
+      "name": "cloudzero",
       "outputs": 1,
       "memorySize": 128,
       "timeout": 30,
+      "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
       "wires": [
