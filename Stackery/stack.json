@@ -120,8 +120,8 @@
     {
       "id": "4e983761",
       "type": "errors",
-      "x": 175,
-      "y": 419,
+      "x": 150,
+      "y": 414,
       "wires": [
         [
           "eb45e755"
@@ -131,27 +131,9 @@
     {
       "id": "eb45e755",
       "type": "function",
-      "x": 405,
-      "y": 427,
+      "x": 375,
+      "y": 412,
       "name": "Log to Rollbar",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "wires": [
-        [
-          "ce55f7be"
-        ]
-      ]
-    },
-    {
-      "id": "ce55f7be",
-      "type": "function",
-      "x": 650,
-      "y": 437,
-      "name": "Gehad",
       "outputs": 1,
       "memorySize": 128,
       "timeout": 30,
