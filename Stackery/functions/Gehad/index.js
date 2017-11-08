@@ -4,6 +4,6 @@ module.exports = function handler(message) {
   console.dir(message)
 
   let response = {}
-  
+  // comment
   return response
 }
