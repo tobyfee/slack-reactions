@@ -132,7 +132,7 @@
       "id": "eb45e755",
       "type": "function",
       "x": 375,
-      "y": 417,
+      "y": 412,
       "name": "Log to Rollbar",
       "outputs": 1,
       "memorySize": 128,
