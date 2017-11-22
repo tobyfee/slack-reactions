@@ -13,7 +13,8 @@ module.exports = function eventRouter(message) {
       // want to return as soon as the message is transmitted, rather
       // than waiting for the promise to resolve, because we need to
       // make sure that we respond to Slack within three seconds
-      return stackery.output(body.event).then(() => ({ statusCode: 204 }));
+      return stackery.output(body.event, {waitFor: 'TRANSMISSION'})
+        .then(() => ({ statusCode: 204 }));
     default:
       throw new Error('Unrecognized event type: ', body);
   }
