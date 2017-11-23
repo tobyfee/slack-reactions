@@ -93,13 +93,16 @@
       "x": 520,
       "y": 120,
       "name": "Handle Event",
-      "outputs": 1,
+      "outputs": 2,
       "memorySize": 128,
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
       "wires": [
+        [
+          "df3e965"
+        ],
         [
           "17c6724d"
         ]
@@ -158,6 +161,19 @@
       "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "df3e965",
+      "type": "table",
+      "x": 840,
+      "y": 105,
+      "name": "Message IDs",
+      "hashKey": "",
+      "hashKeyType": "string",
+      "expirationKey": "expiration",
       "wires": [
         []
       ]
