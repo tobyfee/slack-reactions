@@ -29,7 +29,7 @@ function isReplay(id) {
     .then(() => false)
     .catch(err => {
       if (err.code === 'ConditionalCheckFailed') {
-        return false;
+        return true;
       }
 
       throw err;
