@@ -171,7 +171,7 @@
       "x": 840,
       "y": 105,
       "name": "Message IDs",
-      "hashKey": "",
+      "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
       "wires": [
