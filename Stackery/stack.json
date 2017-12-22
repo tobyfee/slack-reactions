@@ -134,7 +134,7 @@
     {
       "id": "eb45e755",
       "type": "function",
-      "x": 385,
+      "x": 390,
       "y": 417,
       "name": "Log to Rollbar",
       "outputs": 1,
