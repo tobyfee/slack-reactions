@@ -144,7 +144,9 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        []
+        [
+          "4c34770d"
+        ]
       ]
     },
     {
@@ -156,6 +158,20 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "4c34770d",
+      "type": "function",
+      "x": 625,
+      "y": 415,
+      "outputs": 1,
+      "memorySize": 3008,
+      "timeout": 30,
+      "location": "inline",
+      "envVars": {},
       "wires": [
         []
       ]
