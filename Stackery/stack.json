@@ -144,7 +144,9 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        []
+        [
+          "8c0724fe"
+        ]
       ]
     },
     {
@@ -156,6 +158,23 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "8c0724fe",
+      "type": "function",
+      "x": 680,
+      "y": 415,
+      "name": "Benefit",
+      "outputs": 1,
+      "memorySize": 3008,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "entryPoint": "",
       "wires": [
         []
       ]
