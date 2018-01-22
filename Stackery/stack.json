@@ -144,9 +144,7 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        [
-          "514f50b8"
-        ]
+        []
       ]
     },
     {
@@ -158,23 +156,6 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
-      "wires": [
-        []
-      ]
-    },
-    {
-      "id": "514f50b8",
-      "type": "function",
-      "x": 635,
-      "y": 420,
-      "name": "Pythian",
-      "outputs": 1,
-      "memorySize": 3008,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "entryPoint": "",
       "wires": [
         []
       ]
