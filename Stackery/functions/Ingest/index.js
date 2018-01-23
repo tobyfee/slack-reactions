@@ -3,7 +3,7 @@ const lambda = new AWS.Lambda();
 
 module.exports = function eventRouter (event, context, callback) {
   console.log(event);
-  const body = JSON.parse(event.body.toString());
+  const body = JSON.parse(event.body);
   if (body.token !== process.env.VERIFICATION_TOKEN) {
     throw new Error('Invalid Verification Token received from Slack!');
   }
@@ -19,7 +19,7 @@ module.exports = function eventRouter (event, context, callback) {
       // than waiting for the remote lambda to respond, because we need to
       // make sure that we respond to Slack within three seconds.
       const params = {
-        FunctionName: JSON.parse(process.env.STACKERY_PORTS[0][0]).functionName,
+        FunctionName: JSON.parse(process.env.STACKERY_PORTS)[0][0].functionName,
         InvocationType: 'Event',
         Payload: JSON.stringify(body)
       };
