@@ -2,6 +2,7 @@ const AWS = require('aws-sdk');
 const lambda = new AWS.Lambda();
 
 module.exports = function eventRouter (event, context, callback) {
+  console.log(event);
   const body = JSON.parse(event.body.toString());
   if (body.token !== process.env.VERIFICATION_TOKEN) {
     throw new Error('Invalid Verification Token received from Slack!');
