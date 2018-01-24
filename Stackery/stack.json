@@ -145,7 +145,7 @@
       "envVars": {},
       "wires": [
         [
-          "49a5f37a"
+          "258e4284"
         ]
       ]
     },
@@ -163,11 +163,11 @@
       ]
     },
     {
-      "id": "49a5f37a",
+      "id": "258e4284",
       "type": "function",
-      "x": 660,
-      "y": 420,
-      "name": "HWVP",
+      "x": 675,
+      "y": 415,
+      "name": "VMWare",
       "outputs": 1,
       "memorySize": 3008,
       "timeout": 30,
