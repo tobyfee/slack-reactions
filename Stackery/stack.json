@@ -144,7 +144,9 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        []
+        [
+          "b047f511"
+        ]
       ]
     },
     {
@@ -156,6 +158,23 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "b047f511",
+      "type": "function",
+      "x": 700,
+      "y": 415,
+      "name": "a16z",
+      "outputs": 1,
+      "memorySize": 3008,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "entryPoint": "",
       "wires": [
         []
       ]
