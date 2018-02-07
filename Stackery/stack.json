@@ -144,9 +144,7 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        [
-          "b47e7fc7"
-        ]
+        []
       ]
     },
     {
@@ -158,23 +156,6 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
-      "wires": [
-        []
-      ]
-    },
-    {
-      "id": "b47e7fc7",
-      "type": "function",
-      "x": 625,
-      "y": 415,
-      "name": "verifone",
-      "outputs": 1,
-      "memorySize": 3008,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "entryPoint": "",
       "wires": [
         []
       ]
