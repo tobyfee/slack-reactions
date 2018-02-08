@@ -144,7 +144,9 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        []
+        [
+          "de7dc899"
+        ]
       ]
     },
     {
@@ -156,6 +158,23 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "de7dc899",
+      "type": "function",
+      "x": 645,
+      "y": 410,
+      "name": "XERO",
+      "outputs": 1,
+      "memorySize": 3008,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "entryPoint": "",
       "wires": [
         []
       ]
