@@ -1,6 +1,6 @@
 
 {
-  "name": "docker",
+  "name": "nicole",
   "version": "1.0.0",
   "dependencies": {
     "aws-sdk": "~2"
