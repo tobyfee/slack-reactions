@@ -145,7 +145,7 @@
       "envVars": {},
       "wires": [
         [
-          "3e4792c9"
+          "5531f28"
         ]
       ]
     },
@@ -177,19 +177,6 @@
       "entryPoint": "",
       "wires": [
         []
-      ]
-    },
-    {
-      "id": "3e4792c9",
-      "type": "stream",
-      "x": 595,
-      "y": 470,
-      "name": "Demo K",
-      "shardCount": 1,
-      "wires": [
-        [
-          "5531f28"
-        ]
       ]
     }
   ]
