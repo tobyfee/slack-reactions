@@ -144,7 +144,9 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        []
+        [
+          "3e4792c9"
+        ]
       ]
     },
     {
@@ -158,6 +160,36 @@
       "expirationKey": "expiration",
       "wires": [
         []
+      ]
+    },
+    {
+      "id": "5531f28",
+      "type": "function",
+      "x": 745,
+      "y": 415,
+      "name": "SiriusXM",
+      "outputs": 1,
+      "memorySize": 3008,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "envVars": {},
+      "entryPoint": "",
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "3e4792c9",
+      "type": "stream",
+      "x": 595,
+      "y": 470,
+      "name": "Demo K",
+      "shardCount": 1,
+      "wires": [
+        [
+          "5531f28"
+        ]
       ]
     }
   ]
