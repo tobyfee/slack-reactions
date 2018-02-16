@@ -144,9 +144,7 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        [
-          "cde18c05"
-        ]
+        []
       ]
     },
     {
@@ -158,23 +156,6 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
-      "wires": [
-        []
-      ]
-    },
-    {
-      "id": "cde18c05",
-      "type": "function",
-      "x": 655,
-      "y": 425,
-      "name": "Nextdoor",
-      "outputs": 1,
-      "memorySize": 3008,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "entryPoint": "",
       "wires": [
         []
       ]
