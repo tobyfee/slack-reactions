@@ -144,9 +144,7 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        [
-          "4929481d"
-        ]
+        []
       ]
     },
     {
@@ -158,23 +156,6 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
-      "wires": [
-        []
-      ]
-    },
-    {
-      "id": "4929481d",
-      "type": "function",
-      "x": 670,
-      "y": 420,
-      "name": "Deloitte",
-      "outputs": 1,
-      "memorySize": 3008,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "entryPoint": "",
       "wires": [
         []
       ]
