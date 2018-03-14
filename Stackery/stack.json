@@ -178,6 +178,23 @@
       "wires": [
         []
       ]
+    },
+    {
+      "id": "9322e57",
+      "type": "function",
+      "x": 650,
+      "y": 500,
+      "name": "java",
+      "outputs": 1,
+      "memorySize": 3008,
+      "timeout": 30,
+      "runtime": "java",
+      "location": "inline",
+      "envVars": {},
+      "entryPoint": "",
+      "wires": [
+        []
+      ]
     }
   ]
 }
