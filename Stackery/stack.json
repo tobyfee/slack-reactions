@@ -144,9 +144,7 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        [
-          "e28edaac"
-        ]
+        []
       ]
     },
     {
@@ -158,23 +156,6 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
-      "wires": [
-        []
-      ]
-    },
-    {
-      "id": "e28edaac",
-      "type": "function",
-      "x": 675,
-      "y": 420,
-      "name": "Verizon",
-      "outputs": 1,
-      "memorySize": 3008,
-      "timeout": 30,
-      "runtime": "nodejs",
-      "location": "inline",
-      "envVars": {},
-      "entryPoint": "",
       "wires": [
         []
       ]
