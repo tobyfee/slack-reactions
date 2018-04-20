@@ -144,7 +144,9 @@
       "location": "inline",
       "envVars": {},
       "wires": [
-        []
+        [
+          "f9df635f"
+        ]
       ]
     },
     {
@@ -156,6 +158,25 @@
       "hashKey": "id",
       "hashKeyType": "string",
       "expirationKey": "expiration",
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "f9df635f",
+      "type": "function",
+      "x": 590,
+      "y": 415,
+      "width": 100,
+      "height": 30,
+      "name": "Barstool",
+      "outputs": 1,
+      "memorySize": 3008,
+      "timeout": 30,
+      "runtime": "nodejs8",
+      "location": "inline",
+      "envVars": {},
+      "entryPoint": "",
       "wires": [
         []
       ]
