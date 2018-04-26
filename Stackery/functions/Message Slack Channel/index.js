@@ -35,4 +35,4 @@ module.exports = function slackMessenger({ text }) {
     request.write(postData);
     request.end();
   }); 
-}
+} 

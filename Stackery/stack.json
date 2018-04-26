@@ -63,6 +63,7 @@
       "envVars": {
         "SLACK_TOKEN": "${config.slack.oauthToken}"
       },
+      "entryPoint": "",
       "wires": [
         []
       ]
